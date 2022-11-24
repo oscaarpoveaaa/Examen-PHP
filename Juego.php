@@ -6,15 +6,23 @@ maxNumJugadores). Finalmente, sobrescribe tanto el constructor como el método
 muestraResumen. En index2.php está el código para probar la clase. 
 -->
 
-<?php 
+<?php
 include_once("Soporte.php");
 
-class Juego extends Soporte{
+class Juego extends Soporte
+{
 
+    public function __construct(string $titulo, int $numero, int $precio, public string $consola, private int $minNumJugadores, private int $maxNumJugadores)
+    {
+        parent::__construct($titulo, $numero, $precio);
+    }
 
-
-
+    public function muestraResumen()
+    {
+        echo    "<br>Consola: " . $this->consola .
+            "<br>Min Jugadores: " . $this->minNumJugadores .
+            "<br>Max jugadores: " . $this->maxNumJugadores . "<br>";
+    }
 }
 
 ?>
-

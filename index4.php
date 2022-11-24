@@ -1,8 +1,8 @@
 <?php
-//Includes: Faltan
+include_once("Cliente.php");
 
 //instanciamos un par de objetos cliente
-/*
+
 $cliente1 = new Cliente("Bruce Wayne", 23);
 $cliente2 = new Cliente("Clark Kent", 33);
 
