@@ -1,15 +1,9 @@
-<!-- Crea la clase Disco la cual hereda de Soporte. Añade los atributos idiomas y 
-formatoPantalla. A continuación, sobreescribe tanto el contructor como el método 
-muestraResumen. En index1.php está el código para probar la clase.  -->
-
 <?php
 
 namespace ExamenPHP\app;
 
 include_once("./autoload.php");
 include_once("Soporte.php");
-
-
 
 class Disco extends Soporte
 {
