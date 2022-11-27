@@ -6,40 +6,43 @@ setters.
 Definir una constante mediante un propiedad privada y estática denominada `IVA con 
 un valor del 21%. Usa index1.php para probar la clase.  -->
 
-<?php 
-class Soporte{
-public const IVA = 0.21; 
 
-function __construct(public string $titulo, protected int $numero, private int $precio){
-     
-}
+<!-- 5.Transforma Soporte a una clase abstracta y comprueba que todo sigue funcionando. 
+¿Qué conseguimos al hacerla abstracta? Responda mediante comentario en la clase. 
+ 
+En index4.php está el código para probar la clase VideoClub.  -->
 
 
-
-
-
-public function getPrecio(){
-return $this->precio;
-}
-
-
-public function getPrecioConIva(){
-return $this->precio + ($this->precio * $this::IVA);
-
-}
-
-
-public function getNumero()
+<?php
+include_once("Resumible.php");
+abstract class Soporte implements Resumible
 {
-return $this->numero;
-}
+    public const IVA = 0.21;
 
-public function muestraResumen (){
-    echo "Título: " . $this->titulo . "<br>Número: " . $this->getNumero() . "<br>Precio: " . $this->getPrecio() . 
-    "<br>Precio con IVA: " . $this->getPrecioConIva() . "<br>" ;    
-}
+    function __construct(public string $titulo, protected int $numero, private int $precio)
+    {
+    }
+    public function getPrecio()
+    {
+        return $this->precio;
+    }
 
 
+    public function getPrecioConIva()
+    {
+        return $this->precio + ($this->precio * $this::IVA);
+    }
 
+
+    public function getNumero()
+    {
+        return $this->numero;
+    }
+
+    public function muestraResumen()
+    {
+        echo "Título: " . $this->titulo . "<br>Número: " . $this->getNumero() . "<br>Precio: " . $this->getPrecio() .
+            "<br>Precio con IVA: " . $this->getPrecioConIva() . "<br>";
+    }
 }
 ?>
