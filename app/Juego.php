@@ -7,7 +7,11 @@ muestraResumen. En index2.php está el código para probar la clase.
 -->
 
 <?php
+namespace ExamenPHP\app;
+
 include_once("Soporte.php");
+include_once("./autoload.php");
+
 
 class Juego extends Soporte
 {

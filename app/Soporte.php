@@ -14,7 +14,12 @@ En index4.php está el código para probar la clase VideoClub.  -->
 
 
 <?php
+
+namespace ExamenPHP\app;
+
 include_once("Resumible.php");
+include_once("./autoload.php");
+
 abstract class Soporte implements Resumible
 {
     public const IVA = 0.21;

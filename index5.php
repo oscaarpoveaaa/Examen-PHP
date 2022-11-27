@@ -1,5 +1,7 @@
 <?php
-include_once "Videoclub.php"; // No incluimos nada más
+
+include_once("autoload.php");
+use ExamenPHP\app\Videoclub;
 
 $vc = new Videoclub("Severo 8A"); 
 

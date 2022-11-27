@@ -7,11 +7,15 @@ privado de incluirProducto, el cual es el encargado de introducirlo dentro del a
   -->
 
 <?php
+namespace ExamenPHP\app;
+
 include_once("CintaVideo.php");
 include_once("Juego.php");
 include_once("Disco.php");
 include_once("Soporte.php");
 include_once("Cliente.php");
+include_once("./autoload.php");
+
 
 class Videoclub
 {

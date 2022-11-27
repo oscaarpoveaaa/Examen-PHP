@@ -1,8 +1,11 @@
 <?php
-include_once("Cliente.php");
-include_once("CintaVideo.php");
-include_once("Juego.php");
-include_once("Disco.php");
+
+include_once("autoload.php");
+
+use ExamenPHP\app\Cliente;
+use ExamenPHP\app\CintaVideo;
+use ExamenPHP\app\Juego;
+use ExamenPHP\app\Disco;
 
 //instanciamos un par de objetos cliente
 

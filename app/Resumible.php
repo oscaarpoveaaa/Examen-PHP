@@ -4,6 +4,10 @@ el interfaz. ¿Hace falta que también lo implementen los hijos? Responda median
 comentario.  -->
 
 <?php 
+namespace ExamenPHP\app;
+
+include_once("./autoload.php");
+
 interface Resumible{
     public function muestraResumen();
     

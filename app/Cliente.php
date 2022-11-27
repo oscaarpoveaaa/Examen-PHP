@@ -24,6 +24,7 @@ mensaje informando de lo ocurrido
 En index3.php está el código para probar la clase.  -->
 
 <?php
+namespace ExamenPHP\app;
 
 class Cliente
 {
